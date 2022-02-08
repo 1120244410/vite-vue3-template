@@ -2,14 +2,6 @@ import axios from "axios";
 import { ElMessage } from "element-plus";
 import { useRouter } from "vue-router";
 import createCommon from "./common";
-import createTransaction from "./transaction";
-import createOrder from "./order";
-import createSetup from "./setup";
-import createAppManage from "./app-manage";
-import createApiManage from "./api-manage";
-import createApiDoc from "./api-doc";
-import createCurl from "./curl";
-import createApiSyncCheck from "./api-sync-check";
 
 const router = useRouter();
 const getUser = function() {
@@ -82,15 +74,7 @@ function uuidv4() {
 }
 
 export const api = {
-  common: createCommon(http),
-  transaction: createTransaction(http),
-  order: createOrder(http),
-  setup: createSetup(http),
-  appManage: createAppManage(http),
-  apiManage: createApiManage(http),
-  apiDoc: createApiDoc(http),
-  curl: createCurl(http),
-  apiSyncCheck: createApiSyncCheck(http)
+  common: createCommon(http)
 };
 
 export default api;

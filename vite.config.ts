@@ -1,9 +1,10 @@
-import { loadEnv } from "vite";
+import { ConfigEnv, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
-const resolveENV = (mode, env) => loadEnv(mode, process.cwd())[env];
+const resolveENV = (mode: string, env: string) =>
+  loadEnv(mode, process.cwd())[env];
 
-export default ({ mode }) => {
+export default ({ mode }: ConfigEnv) => {
   return {
     base: resolveENV(mode, "VITE_BASE_URL"),
     // 使vite支持vue

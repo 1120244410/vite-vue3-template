@@ -5,6 +5,7 @@ import "element-plus/dist/index.css";
 import { api } from "./http/index";
 import Element from "element-plus";
 import Store from "./store";
+import UTable from "./common/UTable.vue";
 import p from "./utils/permissions";
 
 const app = createApp(App);
@@ -13,4 +14,4 @@ app.config.globalProperties.$p = p;
 app.use(router);
 app.use(Element);
 app.use(Store);
-app.mount("#app");
+app.component("UTable", UTable).mount("#app");
