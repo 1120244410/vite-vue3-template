@@ -2,7 +2,7 @@
   "name": "uki-template",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --mode dev",
+    "dev": "vite --mode local",
     "stag": "vite --mode stag",
     "build:develop": "vue-tsc --noEmit && vite build --mode develop",
     "build:stag": "vue-tsc --noEmit && vite build --mode stag",
