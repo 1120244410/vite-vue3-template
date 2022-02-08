@@ -1,6 +1,6 @@
 <template>
   <section class="page">
-    <h1 class="title">基础平台</h1>
+    <h1 class="title">项目</h1>
     <ElCard class="card" shadow>
       <ElForm
         ref="form"
