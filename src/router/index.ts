@@ -7,7 +7,11 @@ const children: RouteRecordRaw[] = [];
 
 for (const menu of menus) {
   const item: RouteRecordRaw = {
-    path: menu.path,
+    path: `${menu.path}${
+      menu.params && menu.params.length
+        ? menu.params.map(el => `/:${el}`).join("")
+        : ""
+    }`,
     name: menu.path.replace("/", "_"),
     meta: {
       title: menu.title
@@ -32,7 +36,7 @@ for (const menu of menus) {
 export const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    { path: "/", redirect: "/login" },
+    { path: "/", redirect: "/home" },
     {
       path: "/login",
       name: "_login",

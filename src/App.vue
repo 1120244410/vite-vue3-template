@@ -22,14 +22,14 @@ export default {
       if (user) {
         this.$store.commit("setUser", user.user);
         this.getPermission();
-      } else if (["dev", "devlope"].includes(import.meta.env.VITE_ENV)) {
-        this.$router.push("/login");
-      } else {
+      } else if (import.meta.env.VITE_ENV === "prod") {
         window.location = `https://${
           ["dev", "devlope"].includes(import.meta.env.VITE_ENV)
             ? "devukih5"
             : "miaohong"
         }.neoclub.cn/neoclub/pms/`;
+      } else {
+        this.$router.push("/login");
       }
     },
     async getPermission() {

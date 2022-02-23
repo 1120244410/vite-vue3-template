@@ -4,6 +4,7 @@ export declare type MenuItem = {
   path: string;
   children?: MenuItem[];
   auth: string | Array<string>;
+  params?: string[];
 };
 
 export const menus: MenuItem[] = [
@@ -12,6 +13,7 @@ export const menus: MenuItem[] = [
     icon: "el-icon-cpu",
     path: "/test",
     children: [],
+    params: [],
     auth: "basis_transaction_hub"
   }
 ];
