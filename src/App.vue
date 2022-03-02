@@ -1,5 +1,4 @@
 <script setup>
-import { defineComponent } from "vue";
 import locale from "element-plus/lib/locale/lang/zh-cn";
 import { RouterView } from "vue-router";
 </script>
