@@ -61,7 +61,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-
 .page {
   height: 100%;
   width: 100%;
@@ -71,5 +70,11 @@ body {
   margin-top: 12px;
   display: flex;
   justify-content: center;
+}
+.ellipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>
